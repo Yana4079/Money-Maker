@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Money-maker</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,700,800,900,900i&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <div class="header__navigation">
+                <div class="logo header__logo">
+                    <img class="img logo__img" src="img/Logo.png" alt="logo">
+                </div>
+                <nav class="nav">
+                    <a class="nav__href" href="">work</a>
+                    <a class="nav__href" href="">about it</a>
+                    <a class="nav__href" href="">news</a>
+                    <a class="nav__href" href="">contact</a>
+                </nav>
+            </div>
+            <div class="header__mainContent">
+                <h1 class="header__title">
+                    Money-maker.
+                    <div class="header__title">Вы можете зарабатывать
+                        от 300.000₽ в месяц!
+                    </div>
+                </h1>
+            </div>
+            <a href="#to-information" class="header__scroll">
+                <img src="img/Mouse.png" alt="scrollToInformation">
+                <p>Жми, чтобы узнать больше</p>
+            </a>
+        </div>
+        <img class="header__fade" src="img/Fade.png" alt="fadeBottom">
+    </header>
+    <main class="main mainContent" id="to-information">
+        <div class="main__contact">
+            <h2 class="main__title">Всем привет!<div class="main__title span">Меня зовут Евгений</div>
+            </h2>
+            <p class="main__subtitle">Прямо сейчас многие люди зарабатывают в интернете деньги не выходя из дома, если
+                Вы попали на эту страницу, значит Вас интересуют ответы на вопросы: "Можно ли заработать в интернете без
+                вложений и обмана в 2019?", "Где и как зарабатывать в интернете?", "Какие самые простые, быстрые и
+                легкие способы заработка в интернете?", "Хочу заработать денег в интернете без вложений с нуля, С чего
+                начать?".
+                <div class="main__subtitle">И я могу предоставить Вам инструкцию по заработку без рисков! Так
+                    как сам прошел весь путь и сейчас абсолютно себе ни в чем не отказываю.</div>
+            </p>
+            <button class="main__button" onclick="openModal()">Получить курс</button>
+
+        </div>
+        <div class="main__photoContainer">
+            <div class="main__photoContainerOne">
+                <img src="img/Photo.png" alt="main__photo">
+                <img src="img/Photo2.png" alt="main__photo">
+            </div>
+
+            <div class="main__photoContainerTwo">
+                <img src="img/Photo3.png" alt="main__photo">
+            </div>
+
+        </div>
+    </main>
+    <div class="sectionOfMine">
+        <div class="firstBlock parallax">
+            <img class="sectionImg parallax__layer" src="img/PhotoofJohn.png" alt="photographer">
+        </div>
+        <div class="secondBlock">
+            <h1 class="sectionTitle">ПРИСТУПАЙТЕ К ОБУЧЕНИЮ ПРЯМО СЕЙЧАС</h1>
+            <p class="sectionSubtitle">Мой доход в Instagram более 1.000.000 ₽ в месяц
+                Я помог уже 100+ людям создать свой бизнес в Instagram </p>
+            <button class="section__button" onclick="openModal()">Купить курс за 990₽</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper footer__wrapper">
+            <div class="footer__header">
+                <h1 class="sectionTitle">ЗАРАБАТЫВАТЬ БОЛЬШИЕ ДЕНЬГИ В INSTAGRAM ОЧЕНЬ ПРОСТО</h1>
+                <p class="sectionSubtitle footer__subtitle">Я научу тебя
+                    зарабатывать в Instagram!
+                    Нужно всего лишь пройти курс </p>
+            </div>
+            <div class="footer__maincontent">
+                <img src="img/IMG_2033.JPG" alt="">
+            </div>
+            <div class="footer__bottom">
+                <img class="img logo__img footer__logo" src="img/Logo.png" alt="logo">
+                <p class="sectionSubtitle">ПРИСТУПАЙТЕ К ОБУЧЕНИЮ ПРЯМО СЕЙЧАС
+                    <div class="sectionSubtitle">Закажи курс по заработку в Instagram со скидкой 70%</div>
+                </p>
+                <button class="section__button" style="background-color: #111;" onclick="openModal()">Купить курс за 990₽</button>
+                <nav class="nav">
+                    <a class="nav__href" href="">work</a>
+                    <a class="nav__href" href="">about It</a>
+                    <a class="nav__href" href="">news</a>
+                    <a class="nav__href" href="">contact</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <div id="ModalThanks" class="ModalThanks">
+        <div class="thanksModal" id="waitDialog">
+            Спасибо, в течении часа с Вами свяжется наш менеджер!
+            <button class="thanksModal__button" type="button" onclick="hideThanksModal()">Закрыть</button>
+        </div>
+        <form action="" id="form">
+            <p class="form__title">Заполните заявку ниже и наш менеджер свяжется с вами</p>
+            <input class="form__name" type="text" placeholder="Введите имя">
+            <input class="form__phone" type="phone" placeholder="Введите телефон">
+            <input class="form__button" type="button" value="Отправить заявку" onclick="openThanksModal()">
+        </form>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById('ModalThanks').style.display = "flex";
+            console.log("Привет");
+        }
+        function openThanksModal() {
+            document.getElementById('form').style.display = "none"
+            document.getElementById('waitDialog').style.display = "flex";
+            console.log("Привет");
+        }
+        function hideThanksModal() {
+            document.getElementById('ModalThanks').style.display = "none"
+            console.log("Привет");
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</body>
+
+</html>
